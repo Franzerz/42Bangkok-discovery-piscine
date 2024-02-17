@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ -z "$1" ]; then
 	echo "No arguments supplied"
 elif [ -z "$2" ]; then
