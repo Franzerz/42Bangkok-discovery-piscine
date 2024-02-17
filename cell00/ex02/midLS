@@ -1,0 +1,1 @@
+ls -A | grep -v '^\.' | ls -m
