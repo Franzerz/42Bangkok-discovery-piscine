@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+}
+body {
+    align-content: center;
+    font-size: medium;
+    background-color: salmon;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.person {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.person img {
+    max-width: 100%;
+    height: auto;
+}
+
+.person-details {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}

@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    background-color: wheat;
+    margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.section {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
