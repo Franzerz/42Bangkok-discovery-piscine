@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="background.css">
+  <title>Background</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <button id="changeColor">Change Color</button>
+</body>
+<script>
+  $(document).ready(function() {
+  $("#changeColor").on("click", function() {
+      let newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+      $("body").css("background-color", newColor);
+  });
+});
+</script>
+</html>

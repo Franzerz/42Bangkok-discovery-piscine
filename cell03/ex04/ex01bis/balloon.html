@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ฺBalloon</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		let size = 200;
+		const inc = 10;
+		const dec = 5;
+		const colors = ['#ff0000', '#32ff00', '#000dff'];
+		let c = 0;
+		$(document).ready(() => {
+			setCircle(size, c);
+			$('#balloon').click(() => setCircle(size + inc, ++c))
+			$('#balloon').mouseleave(() => setCircle(size - dec, --c))
+		});
+		function setCircle(newSize, newIndex) {
+			size = newSize > 420 || newSize < 200 ? 200 : newSize;
+			c = newIndex < 0 ? colors.length - 1 :  newIndex > colors.length - 1 ? 0 : newIndex;
+			$('#balloon').innerHeight(size);
+			$('#balloon').innerWidth(size);
+			$('#balloon').css('border-radius', size / 2);
+			$('#balloon').css('background-color', colors[c]);
+		}
+	</script>
+</head>
+<body>
+	<div id="balloon"></div>
+</body>
+</html>

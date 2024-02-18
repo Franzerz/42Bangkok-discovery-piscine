@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ฺBalloon</title>
+	<script>
+		let size = 200;
+		const colors = ['#ff0000', '#32ff00', '#000dff'];
+		let c = 0;
+		window.onload = () => {
+			const ball = document.getElementById('balloon');
+			setCircleSize(size, c);
+			ball.addEventListener('click', () => setCircleSize(size + 10, ++c));
+			ball.addEventListener('mouseleave', () => setCircleSize(size - 5, --c));
+		}
+		function setCircleSize(newSize, nc) {
+			const ball = document.getElementById('balloon');
+			style = ball.style;
+			size = newSize > 420 || newSize < 200 ? 200 : newSize;
+			c = (nc < 0) ? colors.length - 1 : (nc > colors.length - 1) ? 0 : nc;
+			style.width = size + 'px';
+			style.height = size + 'px';
+			style.borderRadius = size / 2 + 'px';
+			style.backgroundColor = colors[c];
+		}
+	</script>
+</head>
+<body>
+	<div id="balloon"></div>
+</body>
+</html>

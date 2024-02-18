@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <label for="leftInput"></label>
+    <input type="text" id="leftInput"/>
+    <label for="operator"></label>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <label for="rightInput"></label>
+    <input type="text" id="rightInput"/>
+    <input type="button" value="Try me!" onclick="calculate()"/>
+    <script>
+        function calculate() {
+            var left = parseInt(document.getElementById("leftInput").value);
+            var operator = document.getElementById("operator").value;
+            var right = parseInt(document.getElementById("rightInput").value);
+            if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+                alert("Error :(");
+                return;
+            }
+            var result;
+            switch (operator) {
+                case '+':
+                    result = left + right;
+                    break;
+                case '-':
+                    result = left - right;
+                    break;
+                case '*':
+                    result = left * right;
+                    break;
+                case '/':
+                    if (right === 0) {
+                        alert("It's over 9000!");
+                        return;
+                    }
+                    result = left / right;
+                    break;
+                case '%':
+                    if (right === 0) {
+                        alert("It's over 9000!");
+                        return;
+                    }
+                    result = left % right;
+                    break;
+                default:
+                    alert("Error: Invalid operator.");
+                    return;
+            }
+            alert("Result: " + result);
+            console.log("Result:", result);
+        }
+        setInterval(function () {
+            alert("Please, use me...");
+        }, 30000);
+    </script>
+</body>
+</html>
