@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+
+p {
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.inside-dropdown {
+  display: none;
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .inside-dropdown {
+  display: block;
+}
