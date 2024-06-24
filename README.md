@@ -1,5 +1,5 @@
 # 42Bangkok-discovery-piscine
-<p align="center">This is my [Discovery Piscine](https://github.com/Franzerz/42Bangkok-discovery-piscine) source code.</p>
+This is my [Discovery Piscine](https://github.com/Franzerz/42Bangkok-discovery-piscine) source code.
 
 ## About Discovery Piscine
 Discovery Piscine is a 5-6 days course that teaches the fundamentals of web development, offered globally within the 42 network around the world. The curriculum will cover Shell, HTML, CSS, and Javascript.
